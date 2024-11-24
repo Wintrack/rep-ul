@@ -1,0 +1,1638 @@
+{
+	"info": {
+		"_postman_id": "a93f3618-46a9-44aa-87d9-a7b96edcd6e9",
+		"name": "repUL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14602497"
+	},
+	"item": [
+		{
+			"name": "Authentictation",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idul\": \"BOB2\",\r\n        \"name\": \"bob\",\r\n        \"sex\": \"male\",\r\n        \"birthDate\": \"2018-07-14\",\r\n        \"email\": \"test2@test.com\",\r\n        \"password\": \"yes\",\r\n        \"userType\": \"PREPARER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idul\": \"BOB22\",\r\n        \"name\": \"bob\",\r\n        \"sex\": \"male\",\r\n        \"birthDate\": \"2018-07-14\",\r\n        \"email\": \"test@test.com\",\r\n        \"password\": \"yes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:33:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"DUPLICATE_USER\",\n    \"message\": \"User with provided email already exist. Please login instead\"\n}"
+						},
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idul\": \"BOB22\",\r\n        \"name\": \"bob\",\r\n        \"sex\": \"male\",\r\n        \"birthDate\": \"2018-07-14\",\r\n        \"email\": \"test@test.com\",\r\n        \"password\": \"yes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:33:42 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"idul\": \"BOB22\",\r\n        \"name\": \"bob\",\r\n        \"sex\": \"male\",\r\n        \"birthDate\": \"2018-07-14\",\r\n        \"email\": \"test@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:33:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"INVALID_BODY\",\n    \"message\": \"register.arg0.password: ne doit pas être nul\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"test@test.com\",\r\n        \"password\": \"yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"email\": \"test@test.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:34:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"INVALID_BODY\",\n    \"message\": \"authenticate.arg0.password: ne doit pas être nul\"\n}"
+						},
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"email\": \"test@test.com\",\r\n        \"password\": \"yes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:34:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNjk2MDI2ODQ1fQ.NiixrfgMmJsW_X7O8vfmfHytwzdYzcSOcWUMQxUhYk8\"\n}"
+						},
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"email\": \"test@testbad.com\",\r\n        \"password\": \"yes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:34:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"INVALID_CREDENTIALS\",\n    \"message\": \"Invalid Credentials\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "FoodBox",
+			"item": [
+				{
+					"name": "Get foodbox",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/foodbox/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"foodbox",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get foodbox",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/foodbox",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"foodbox"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:34:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"f8a669fe-dc17-4885-ae84-e094df6f9d6f\",\n        \"type\": \"STANDARD\",\n        \"recipes\": [\n            {\n                \"name\": \"Spaghetti Carbonara\",\n                \"calories\": 650,\n                \"ingredients\": [\n                    {\n                        \"name\": \"spaghetti\",\n                        \"quantity\": \"200g\"\n                    },\n                    {\n                        \"name\": \"egg\",\n                        \"quantity\": \"2\"\n                    },\n                    {\n                        \"name\": \"pecorino cheese\",\n                        \"quantity\": \"50g\"\n                    },\n                    {\n                        \"name\": \"guanciale\",\n                        \"quantity\": \"100g\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get ingredients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/foodbox/18b54027-931f-40cb-899e-01ace9ab4f32/recipe/Spaghetti Carbonara/ingredient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"foodbox",
+								"18b54027-931f-40cb-899e-01ace9ab4f32",
+								"recipe",
+								"Spaghetti Carbonara",
+								"ingredient"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get foodbox",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/foodbox",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"foodbox"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:34:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"f8a669fe-dc17-4885-ae84-e094df6f9d6f\",\n        \"type\": \"STANDARD\",\n        \"recipes\": [\n            {\n                \"name\": \"Spaghetti Carbonara\",\n                \"calories\": 650,\n                \"ingredients\": [\n                    {\n                        \"name\": \"spaghetti\",\n                        \"quantity\": \"200g\"\n                    },\n                    {\n                        \"name\": \"egg\",\n                        \"quantity\": \"2\"\n                    },\n                    {\n                        \"name\": \"pecorino cheese\",\n                        \"quantity\": \"50g\"\n                    },\n                    {\n                        \"name\": \"guanciale\",\n                        \"quantity\": \"100g\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vendor Location",
+			"item": [
+				{
+					"name": "Get vendorLocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/vendorLocation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"vendorLocation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get VendorLocation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/vendorLocation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"vendorLocation"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:35:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"location\": \"MYRAND\",\n        \"name\": \"Secteur EST\",\n        \"capacity\": 12\n    },\n    {\n        \"location\": \"VANDRY\",\n        \"name\": \"Cours du vandry\",\n        \"capacity\": 15\n    },\n    {\n        \"location\": \"DESJARDINS\",\n        \"name\": \"Centre de service - Desjardins\",\n        \"capacity\": 20\n    },\n    {\n        \"location\": \"PLACE_STE_FOY\",\n        \"name\": \"Secteur Ouest - Place Ste-foy\",\n        \"capacity\": 15\n    },\n    {\n        \"location\": \"test\",\n        \"name\": \"test\",\n        \"capacity\": 100\n    },\n    {\n        \"location\": \"VACHON\",\n        \"name\": \"Entrée Vachon #1\",\n        \"capacity\": 15\n    },\n    {\n        \"location\": \"PYRAMIDE\",\n        \"name\": \"Secteur Nord - Chemin Ste-foy\",\n        \"capacity\": 15\n    },\n    {\n        \"location\": \"PEPS\",\n        \"name\": \"Entrée PEPS #3\",\n        \"capacity\": 25\n    },\n    {\n        \"location\": \"CASAULT\",\n        \"name\": \"Secteur art\",\n        \"capacity\": 14\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "Create subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"creditCard\": {\r\n            \"CardNumber\": \"555555555555\",\r\n            \"ccv\": 555,\r\n            \"expDate\": \"2022-12-09T18:25:58.6037597\",\r\n            \"fullName\": \"Bob the testor\"\r\n        },\r\n        \"foodBoxId\": \"b4409129-f9f3-4b8b-8bac-48f40fd59175\",\r\n        \"frequency\": {\r\n            \"frequencyType\": \"WEEKLY\",\r\n            \"date\": \"2023-11-27T20:23\"\r\n        },\r\n        \"location\": \"MYRAND\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/subscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"subscription"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Subscription",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"boxType\": \"STANDARD\",\r\n        \"frequency\": \"WEEKLY\",\r\n        \"location\": \"Secteur EST\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:49:12 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Create Subscription",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"boxType\": \"STANDARD\",\r\n        \"frequency\": \"WEEKLY\",\r\n        \"location\": \"Secteur OUEST\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:49:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"RESOURCE NOT FOUND\",\n    \"message\": \"Vendor location not found\"\n}"
+						},
+						{
+							"name": "Create Subscription",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"boxType\": \"STANDARD\",\r\n        \"location\": \"Secteur OUEST\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:49:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"INVALID_BODY\",\n    \"message\": \"subscribe.arg1.frequency: ne doit pas être nul\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get subscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/subscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"subscription"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:50:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a4938b1-f61c-4059-8222-ed651fadd4ef\",\n        \"foodBoxType\": \"STANDARD\",\n        \"frequency\": \"WEEKLY\",\n        \"vendorLocation\": {\n            \"location\": \"Secteur EST\",\n            \"name\": \"Vendor\",\n            \"capacity\": 100\n        },\n        \"foodBox\": null,\n        \"startDate\": \"2023-09-29\"\n    }\n]"
+						},
+						{
+							"name": "Get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:50:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a4938b1-f61c-4059-8222-ed651fadd4ef\",\n        \"foodBoxType\": \"STANDARD\",\n        \"frequency\": \"WEEKLY\",\n        \"vendorLocation\": {\n            \"location\": \"Secteur EST\",\n            \"name\": \"Vendor\",\n            \"capacity\": 100\n        },\n        \"foodBox\": {\n            \"id\": \"98f3bcb6-d0c1-4aed-8389-44f76ba04b87\",\n            \"type\": \"STANDARD\",\n            \"recipes\": [\n                {\n                    \"name\": \"Spaghetti Carbonara\",\n                    \"calories\": 650,\n                    \"ingredients\": [\n                        {\n                            \"ingredient\": \"spaghetti\",\n                            \"quantity\": \"200g\"\n                        },\n                        {\n                            \"ingredient\": \"egg\",\n                            \"quantity\": \"2\"\n                        },\n                        {\n                            \"ingredient\": \"pecorino cheese\",\n                            \"quantity\": \"50g\"\n                        },\n                        {\n                            \"ingredient\": \"guanciale\",\n                            \"quantity\": \"100g\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"startDate\": \"2023-09-29\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Accept subscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/subscription/3ae3652d-94ad-42c1-8a79-c2b54d191249/accept/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"subscription",
+								"3ae3652d-94ad-42c1-8a79-c2b54d191249",
+								"accept",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:50:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a4938b1-f61c-4059-8222-ed651fadd4ef\",\n        \"foodBoxType\": \"STANDARD\",\n        \"frequency\": \"WEEKLY\",\n        \"vendorLocation\": {\n            \"location\": \"Secteur EST\",\n            \"name\": \"Vendor\",\n            \"capacity\": 100\n        },\n        \"foodBox\": null,\n        \"startDate\": \"2023-09-29\"\n    }\n]"
+						},
+						{
+							"name": "Get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:50:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a4938b1-f61c-4059-8222-ed651fadd4ef\",\n        \"foodBoxType\": \"STANDARD\",\n        \"frequency\": \"WEEKLY\",\n        \"vendorLocation\": {\n            \"location\": \"Secteur EST\",\n            \"name\": \"Vendor\",\n            \"capacity\": 100\n        },\n        \"foodBox\": {\n            \"id\": \"98f3bcb6-d0c1-4aed-8389-44f76ba04b87\",\n            \"type\": \"STANDARD\",\n            \"recipes\": [\n                {\n                    \"name\": \"Spaghetti Carbonara\",\n                    \"calories\": 650,\n                    \"ingredients\": [\n                        {\n                            \"ingredient\": \"spaghetti\",\n                            \"quantity\": \"200g\"\n                        },\n                        {\n                            \"ingredient\": \"egg\",\n                            \"quantity\": \"2\"\n                        },\n                        {\n                            \"ingredient\": \"pecorino cheese\",\n                            \"quantity\": \"50g\"\n                        },\n                        {\n                            \"ingredient\": \"guanciale\",\n                            \"quantity\": \"100g\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"startDate\": \"2023-09-29\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Refuse subscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/subscription/8c39c49c-8323-4be4-8427-4048b6d2de2b/refuse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"subscription",
+								"8c39c49c-8323-4be4-8427-4048b6d2de2b",
+								"refuse"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:50:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a4938b1-f61c-4059-8222-ed651fadd4ef\",\n        \"foodBoxType\": \"STANDARD\",\n        \"frequency\": \"WEEKLY\",\n        \"vendorLocation\": {\n            \"location\": \"Secteur EST\",\n            \"name\": \"Vendor\",\n            \"capacity\": 100\n        },\n        \"foodBox\": null,\n        \"startDate\": \"2023-09-29\"\n    }\n]"
+						},
+						{
+							"name": "Get subscription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:{{port}}/subscription",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{port}}",
+									"path": [
+										"subscription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 29 Sep 2023 21:50:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, DELETE, PUT"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With, Content-Type"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(11.0.15)"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a4938b1-f61c-4059-8222-ed651fadd4ef\",\n        \"foodBoxType\": \"STANDARD\",\n        \"frequency\": \"WEEKLY\",\n        \"vendorLocation\": {\n            \"location\": \"Secteur EST\",\n            \"name\": \"Vendor\",\n            \"capacity\": 100\n        },\n        \"foodBox\": {\n            \"id\": \"98f3bcb6-d0c1-4aed-8389-44f76ba04b87\",\n            \"type\": \"STANDARD\",\n            \"recipes\": [\n                {\n                    \"name\": \"Spaghetti Carbonara\",\n                    \"calories\": 650,\n                    \"ingredients\": [\n                        {\n                            \"ingredient\": \"spaghetti\",\n                            \"quantity\": \"200g\"\n                        },\n                        {\n                            \"ingredient\": \"egg\",\n                            \"quantity\": \"2\"\n                        },\n                        {\n                            \"ingredient\": \"pecorino cheese\",\n                            \"quantity\": \"50g\"\n                        },\n                        {\n                            \"ingredient\": \"guanciale\",\n                            \"quantity\": \"100g\"\n                        }\n                    ]\n                }\n            ]\n        },\n        \"startDate\": \"2023-09-29\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateOrderOfTheDay",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all user orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/order/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"order",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderIds\": [\r\n        \"45dc6ddb-cea1-46ed-aef4-c282e5c431e2\",\r\n        \"28f6bd65-1388-4dd9-8bee-b4f7aa0cfb91\",\r\n        \"97a5521b-8ae7-46c4-bc0e-9c81a3138883\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/order/select",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"order",
+								"select"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderIds\": [\r\n        \"45dc6ddb-cea1-46ed-aef4-c282e5c431e2\",\r\n        \"28f6bd65-1388-4dd9-8bee-b4f7aa0cfb91\",\r\n        \"97a5521b-8ae7-46c4-bc0e-9c81a3138883\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/order/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"order",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set ready Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderIds\": [\r\n        \"45dc6ddb-cea1-46ed-aef4-c282e5c431e2\",\r\n        \"28f6bd65-1388-4dd9-8bee-b4f7aa0cfb91\",\r\n        \"97a5521b-8ae7-46c4-bc0e-9c81a3138883\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/order/setReady",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"order",
+								"setReady"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Abort order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderIds\": [\r\n        \"011a1f8c-11de-4dba-ab53-b777e989c98e\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/order/abort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"order",
+								"abort"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Get All delivery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All users delivery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/delivery/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"delivery",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Delivery OnGoing",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/delivery/fa09b9a3-6954-4f37-86e0-0bc676a16cce/setOnGoing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"delivery",
+								"fa09b9a3-6954-4f37-86e0-0bc676a16cce",
+								"setOnGoing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Abort delivery package",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/delivery/fa09b9a3-6954-4f37-86e0-0bc676a16cce/package/f10728ec-a94c-4468-a50b-75a1d6bf0f3c/abort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"delivery",
+								"fa09b9a3-6954-4f37-86e0-0bc676a16cce",
+								"package",
+								"f10728ec-a94c-4468-a50b-75a1d6bf0f3c",
+								"abort"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get all notifcations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/notification/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"notification",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNzAwODYxMDE5LCJ0eXBlIjoiREVMSVZFUiJ9.jvbbPtuz3ZSndBDENLfsPhh-ZPWWmu_9Uval_G22Gq8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "8080"
+		}
+	]
+}
